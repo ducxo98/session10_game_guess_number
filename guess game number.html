@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess game number</title>
+</head>
+<body>
+<script>
+    let result = 82;
+    function guessNumber() {
+        let number = parseInt(prompt('Input your guess number'));
+        while (number !== result) {
+            if (number < result) {
+                alert('Too low! Please choose again.');
+                number = parseInt(prompt('Input your guess number'));
+            }
+            if (number > result) {
+                alert('Too high! Please choose again.');
+                number = parseInt(prompt('Input your guess number'));
+            }
+        }
+        if (number === result) {
+            alert('You choose right number!');
+        }
+    }
+    guessNumber();
+</script>
+</body>
+</html>
